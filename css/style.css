@@ -1,0 +1,88 @@
+
+/* ------------------------------------------------ Home Page ----------------------------------- */
+html {
+    scroll-behavior: smooth;
+    }
+body{
+    overflow-x: hidden;
+    user-select: none;
+}
+#search-container{
+    position: relative;
+    width: 40rem;
+}
+#search-input{
+    position: relative;
+    width: 100%;
+    max-height: 50px;
+    padding: 10px;
+    padding-left: 60px;
+    z-index: 1;
+    border-radius: 5px 5px 5px 5px;
+}
+#search-btn{
+    position: absolute;
+    top:0px;
+    left: 26px;
+    transform: translate(-50%);
+    font-size: 22px;
+    z-index: 3;
+}
+#search-input::placeholder{
+    padding-left: 40px;
+    font-size: 18px;
+}
+#navbar-content{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+#nav-items-container li{
+    padding-right: 20px;
+    display: block;
+}
+#nav-items-container li a{
+    background-color: azure;
+    color: black;
+    border-radius: 5px;
+    padding: 8px 14px;
+    transition: all 0.2s linear;
+}
+#nav-items-container li a:hover{
+    background-color: rgb(46, 44, 44);
+    color: white;
+}
+
+#nav-items-container li svg{
+    position: relative;
+    top:-1px;
+    margin-right: 3px;
+    transition: all 0.2s linear;
+}
+#nav-items-container li a:hover svg{
+    fill: white;
+}
+.card img{
+    transition: all 0.2s linear;
+}
+.card{
+    overflow: hidden;
+}
+.card img:hover{
+    transform: scale(1.1);
+}
+.footer-links{
+    color: white;
+    transition: all 0.2s linear;
+}
+.footer-links:hover{
+    color:rgb(238, 238, 47);
+}
+.quick-links{
+    color: #ccc;
+    transition: all 0.1s linear;
+}
+.quick-links:hover{
+    color: white;
+}
+
+

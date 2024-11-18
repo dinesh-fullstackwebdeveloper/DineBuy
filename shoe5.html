@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DineBuy</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body style="background-color: black;">
+
+    <!-------------------------------------------------- Nav BAR -------------------------------------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="home">
+        <div class="container-fluid d-flex flex-row justify-content-between w-100">
+            <a href="" class="navbar-brand ms-3" style="font-size: 40px;"><img src="img/logo.png" alt=""
+                    style="height: 55px;width: 150px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <span class="navbar-toggler-icon" style="color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0" id="nav-items-container">
+                    <div class="input-group" id="search-container" style="margin-right: 60px;">
+                        <button type="submit" class="btn" id="search-btn"><i class="fa fa-search"></i></button>
+                        <input type="search" class="form-control" placeholder="Search for Products, Brand and More"
+                            id="search-input">
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                viewBox="0 0 24 24" width="24px" fill="#000000">
+                                <g>
+                                    <rect fill="none" height="24" width="24" />
+                                </g>
+                                <g>
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z" />
+                                </g>
+                            </svg>Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="18" height="18" fill="currentColor" class="bi bi-person-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                    </svg>My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+                                    </svg>Orders</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                    </svg>Wishlist</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path
+                                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                    </svg>About</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                    </svg>Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#products" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" fill="currentColor" class="bi bi-box-seam-fill"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z" />
+                            </svg>Products</a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg"
+                                height="20px" viewBox="0 0 24 24" width="20px" fill="#000000">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg>Cart</a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+                            </svg>Notification</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!------------------------------------------------- Shoe1 Descrption Section -------------------------------------------->
+
+    <a href="index.html" class="btn btn-outline-light"
+        style="margin-top: 50px;margin-left: 100px;margin-bottom: 50px;"><i class="bi bi-arrow-left"></i> Back</a>
+
+    <div class="container">
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+            <div class="col">
+                <img src="img/products/shoe_5.jpg" alt="" class="img-fluid rounded">
+                <div class="d-flex justify-content-between gap-2 mt-5">
+                    <button type="button" class="btn btn-lg btn-warning flex-grow-1 text-white"><i
+                            class="bi bi-cart-fill"></i> ADD TO CART</button>
+                    <button type="button" class="btn btn-lg btn-danger flex-grow-1"><i
+                            class="bi bi-lightning-fill"></i> BUY NOW</button>
+                </div>
+                <div class="badge-group row row-cols-1 row-cols-md-2 mt-5">
+                    <div class="col">
+                        <span class="badge p-2 bg-success mt-3 w-100 rounded-pill" style="font-size: 20px;font-weight: normal;"><i class="fs-4 bi bi-repeat"></i> 10 days Return & Exchange</span>
+                    </div>
+                    <div class="col">
+                        <span class="badge p-2 bg-success mt-3 w-100 rounded-pill" style="font-size: 20px;font-weight: normal;"><i class="fs-4 bi bi-truck"></i> Pay on Delivery</span>
+                    </div>
+                    <div class="col">
+                        <span class="badge p-2 bg-success mt-3 w-100 rounded-pill" style="font-size: 20px;font-weight: normal;"><i class="fs-4 bi bi-truck-flatbed"></i> Free Delivery</span>
+                    </div>
+                    <div class="col">
+                        <span class="badge p-2 bg-success mt-3 w-100 rounded-pill" style="font-size: 20px;font-weight: normal;"><i class="fs-4 bi bi-file-earmark-lock2"></i> Secure Transaction</span>
+                    </div>   
+                </div>
+            </div>
+            <div class="col">
+                <h3 class="text-light">SPARX Mens Sm 678 Running,
+                    Walking Shoe</h3>
+                <span class="badge bg-danger p-2 my-2">Great Deals</span>
+                <h5 class="card-subtitle pt-2 text-warning my-2">
+                    <span style="color: red;">-20%</span> ₹825.70
+                </h5>
+                <h6 class="card-subtitle p-3 text-secondary my-2">
+                    M.R.P.: <strike>₹1,199</strike>
+                </h6>
+                <p class="text-light">Inclusive of all taxes <br>
+                    EMI starts at ₹235 per month. </p>
+                <span class="badge bg-warning me-4 p-2 text-dark">Coupon:</span>
+                <input type="checkbox" name="" id="coupon" class="form-check-input">
+                <label for="coupon" class="form-check-label text-light">Apply ₹10 coupon </label>
+                <hr class="text-secondary my-3">
+                <h5 class="text-light mb-2">Size:</h5>
+                <select name="" id="size" class="p-1 mb-3">
+                    <option value="6UK">6UK</option>
+                    <option value="7UK">6UK</option>
+                    <option value="8UK">6UK</option>
+                    <option value="9UK">6UK</option>
+                    <option value="10UK">6UK</option>
+                </select>
+                <h4 class="text-light mb-3">Product Details</h4>
+                <p class="text-secondary mb-2">Product Dimension :31 x 10 x 21 cm; 550 g</p>
+                <p class="text-secondary mb-2">Date First Available : 30 January 2022</p>
+                <p class="text-secondary mb-2">Manufacturer : ASIAN</p>
+                <p class="text-secondary mb-2">ASIN : B09RKHD9LK</p>
+                <p class="text-secondary mb-2">Item model number : EXPRESS-08</p>
+                <p class="text-secondary mb-2">Country of Origin : India</p>
+                <p class="text-secondary mb-2">Department : mens</p>
+                <p class="text-secondary mb-2">Packer : Asian Retail Ventures</p>
+                <p class="text-secondary mb-2">Item Weight : 550 g</p>
+                <p class="text-secondary mb-2">Item Dimensions LxWxH : 31 x 10 x 21 Centimeters</p>
+                <p class="text-secondary mb-2">Net Quantity : 1.00 count</p>
+                <p class="text-secondary mb-2">Generic Name : Sneaker</p>
+                <p class="text-secondary mb-2">Best Sellers Rank: #560 in Shoes & Handbags</p>
+            </div>
+        </div>
+    </div>
+       
+    <!-- Footer Section -->
+
+    <footer class="bg-dark mt-5">
+        <div class="container p-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Get to Know Us</h5>
+                    <a href="" class="text-decoration-none d-block footer-links">Contact Us</a>
+                    <a href="" class="text-decoration-none d-block footer-links">About Us</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Careers</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Press Release</a>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Connect With Us</h5>
+                    <h6 class="text-info">Social</h6>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-facebook"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-twitter-x"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-instagram"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-youtube"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-whatsapp"></i></a>
+                    <h6 class="text-info mt-2">Email</h6>
+                    <a href="mailto:dinebuy16@gmail.com" class="text-decoration-none footer-links"><i
+                            class="bi bi-envelope-at-fill"></i> dinebuy16@gmail.com</a>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Consumer Policy</h5>
+                    <a href="" class="text-decoration-none d-block footer-links">Cancellation & Returns</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Terms of Use</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Security</a>
+                    <a href="" class="text-decoration-none d-block footer-links">FAQ</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Privacy</a>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Registered Office Address</h5>
+                    <address style="color: white;">32A, Thiruvalluvar St,<br>
+                        Beerangimedu,<br>
+                        Gingee-604 202.<br>
+                        Villupuram District.
+                    </address>
+                </div>
+            </div>
+            <hr class="text-secondary mt-5">
+            <div class="row row-cols-1">
+                <div class="col">
+                    <div class="text-center my-3 text-secondary" style="font-size: 13px;">
+                        <a href="" class="text-decoration-none quick-links mx-3">Privacy Policy</a> | <a href=""
+                            class="text-decoration-none quick-links mx-3">Terms and Conditions</a> | <a href=""
+                            class="text-decoration-none quick-links mx-3">Cookies</a>
+                    </div>
+                </div>
+                <div class="col text-center quick-links mt-3" style="font-size: 13px;">
+                    &copy; 2024 DineBuy India Marketing Pvt. Ltd
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

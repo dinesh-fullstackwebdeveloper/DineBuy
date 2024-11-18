@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DineBuy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body style="background-color: black;">
+
+    <!-------------------------------------------------- Nav BAR -------------------------------------------------------->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="home">
+        <div class="container-fluid d-flex flex-row justify-content-between w-100">
+            <a href="" class="navbar-brand ms-3" style="font-size: 40px;"><img src="img/logo.png" alt=""
+                    style="height: 55px;width: 150px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <span class="navbar-toggler-icon" style="color: white;"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0" id="nav-items-container">
+                    <div class="input-group" id="search-container" style="margin-right: 60px;">
+                        <button type="submit" class="btn" id="search-btn"><i class="fa fa-search"></i></button>
+                        <input type="search" class="form-control" placeholder="Search for Products, Brand and More"
+                            id="search-input">
+                    </div>
+                    <li class="nav-item dropdown">
+                        <a href="" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">
+                            <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px"
+                                viewBox="0 0 24 24" width="24px" fill="#000000">
+                                <g>
+                                    <rect fill="none" height="24" width="24" />
+                                </g>
+                                <g>
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 4c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm0 14c-2.03 0-4.43-.82-6.14-2.88C7.55 15.8 9.68 15 12 15s4.45.8 6.14 2.12C16.43 19.18 14.03 20 12 20z" />
+                                </g>
+                            </svg>Login
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="login.html"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="18" height="18" fill="currentColor" class="bi bi-person-fill"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                    </svg>My Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z" />
+                                    </svg>Orders</a></li>
+                            <li><a class="dropdown-item" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                        height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                                        <path
+                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                                    </svg>Wishlist</a></li>
+                            <li><a class="dropdown-item" href="#about"><svg xmlns="http://www.w3.org/2000/svg"
+                                        width="16" height="16" fill="currentColor" class="bi bi-info-circle"
+                                        viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                                        <path
+                                            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                                    </svg>About</a></li>
+                            <li><a class="dropdown-item" href="mailto:dinebuy16@gmail.com"><svg
+                                        xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-telephone" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                    </svg>Contact</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#products" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="18" height="18" fill="currentColor" class="bi bi-box-seam-fill"
+                                viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z" />
+                            </svg>Products</a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg"
+                                height="20px" viewBox="0 0 24 24" width="20px" fill="#000000">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
+                            </svg>Cart</a></li>
+                    <li class="nav-item"><a href="" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                height="20" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2m.995-14.901a1 1 0 1 0-1.99 0A5 5 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901" />
+                            </svg>Notification</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!----------------------------------------------------------- Carousel ------------------------------------------------------------>
+
+    <div class="carousel slide" id="caro" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" class="active" data-bs-target="#caro" data-bs-slide-to="0"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="5"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="6"></button>
+            <button type="button" data-bs-target="#caro" data-bs-slide-to="7"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="img/carousel1.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel2.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel3.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel4.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel5.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel6.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel7.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="img/carousel8.jpg" alt="" class="d-block w-100" style="height: 700px;object-fit:cover">
+            </div>
+        </div>
+        <button class="carousel-control-prev" data-bs-target="#caro" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" data-bs-target="#caro" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <div class="carousel-content d-none d-lg-block">
+        <h1 class="text-light" style="position: relative;top:-375px;left: 525px;">LOWEST PRICE OF THE YEAR</h1>
+        <h5 class="text-light" style="position: relative;top: -350px;left: 590px;">ELEVATE YOUR STYLE, ONE STEP AT A TIME
+        </h5>
+        <button type="button" class="btn btn-lg btn-outline-light" style="position: relative;top: -335px;left: 620px;">Learn
+            More</button>
+        <button type="button" class="btn btn-lg btn-outline-light" style="position: relative;top: -335px;left: 670px;">Shop
+            Now <i class="bi bi-arrow-right"></i></button>
+    </div>
+
+    <!---------------------------------------------------------- Alert ------------------------------------------------------------->
+
+    <div class="container alert alert-success alert-dismissible fade show text-dark my-5" style="width: 95%;">
+        <b>EXTRA 10% CASHBACK ON AXIS BANK CARDS. </b>MIN. PURCHASE OF ₹7000 WITH A MAX. CASHBACK OF ₹1000.T&Cs APPLY.
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+
+    <!-------------------------------------------------------- Products ------------------------------------------------------------>
+
+    <div class="container-fluid mb-3" id="products">
+        <h3 class="my-3 fw-bold text-info ms-3">DineBuy Spotlight</h3>
+        <div class="container-fluid my-3">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_1.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe1.html" class="text-decoration-none text-dark">ASIAN Men's Sports Sneaker
+                                    Lace-Up Lightweight Shoes</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-50%</span> ₹668.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,499</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_2.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe2.html" class="text-decoration-none text-dark">Campus Mens Oxyfit (N)
+                                    Walking, Running Shoes</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-55%</span> ₹647.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,599</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_3.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe3.html" class="text-decoration-none text-dark">Reebok Mens Emergo Runner
+                                    LpRunning Shoes</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-40%</span> ₹547.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,299</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_4.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe4.html" class="text-decoration-none text-dark">Campus Men's Wells Running,
+                                    Walking Shoes</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-60%</span> ₹745.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,899</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_5.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe5.html" class="text-decoration-none text-dark">SPARX Mens Sm 678 Running,
+                                    Walking Shoe</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-20%</span> ₹825.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,199</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_6.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe6.html" class="text-decoration-none text-dark">Bata 8216 Boss-Grip Black
+                                    Derby Shoes for Men</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-30%</span> ₹624.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,499</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_7.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe7.html" class="text-decoration-none text-dark">Sparx Men's Sc0162g Sneakers
+                                    Casuals Wear</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-25%</span> ₹425.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,599</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_8.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe8.html" class="text-decoration-none text-dark">Woodland Men's Leather
+                                    Sneaker Boss-Grip</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-35%</span> ₹525.70
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,299</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_9.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe9.html" class="text-decoration-none text-dark">adidas Mens Drogo M Running,
+                                    Walking Shoe</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-65%</span> ₹650.50
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,999</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_10.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe10.html" class="text-decoration-none text-dark">ASIAN Sports Shoes for Men
+                                    | Soft Cushioned Insole</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-45%</span> ₹550.50
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,599</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_11.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe11.html" class="text-decoration-none text-dark">ASIAN Men's Wonder Sports
+                                    Running,Walking & Gym Shoes</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-65%</span> ₹354.40
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,559</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col my-3">
+                    <div class="card" style="background-color:aliceblue;width: 350px;">
+                        <img src="img/products/shoe_12.jpg" alt="shoe1" class="card-img-top">
+                        <div class="card-body">
+                            <h6 class="card-title p-1">
+                                <a href="shoe11.html" class="text-decoration-none text-dark">U.S. POLO ASSN. Mens Rojas
+                                    2.0-Parent Sneaker</a>
+                            </h6>
+                            <h5 class="card-subtitle pt-2">
+                                <span style="color: red;">-25%</span> ₹837.40
+                            </h5>
+                            <h6 class="card-subtitle p-3 text-secondary">
+                                M.R.P.: <strike>₹1,379</strike>
+                            </h6>
+                            <div class="d-flex justify-content-between gap-2">
+                                <button type="button" class="btn btn-warning flex-grow-1 text-white"><i
+                                        class="bi bi-cart-fill"></i> ADD TO CART</button>
+                                <button type="button" class="btn btn-danger flex-grow-1"><i
+                                        class="bi bi-lightning-fill"></i> BUY NOW</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="text-secondary my-4">
+    </div>
+
+    <!------------------------------------------------------ Features Section ------------------------------------------------------------>
+
+    <section class="features my-5">
+        <div class="container">
+            <h2 class="text-info mb-3">Quality Sports Shoes</h2>
+            <p class="text-secondary" style="width: 80%;">As the most important piece of equipment you’ll wear during
+                exercise, finding the right pair of sports
+                shoes will make or break your workout. High-quality sports shoes not only help with your performance,
+                they also prevent injuries from getting the better of you. With the huge range of adidas sports shoes,
+                we can equip you with the right footwear for your chosen activity. From tennis to winter sports and
+                everything in between, our sports shoes are designed for durability and comfort.</p>
+            <h5 class="text-warning mb-3">Designed to support</h5>
+            <p class="text-secondary" style="width: 80%;">
+                Featuring superior cushioning from Adiprene, your shoe takes the impact when you exercise rather than
+                your foot. Offering flexibility in the right places, our sports shoes will provide your feet with the
+                stability they need. If you’re looking for traction on the golf course, our collection of golf shoes
+                will deliver grip. When you need night-time visibility during your runs, reflective detailing will
+                ensure you’re seen in low light. Whether you’re keeping fit indoors or outdoors, technology like an
+                OrthoLite® sockliner supports your feet and protects your sports shoes from bacteria growth and odours,
+                as well as being moisture-wicking.
+            </p>
+            <h5 class="text-warning mb-3">A high-performance shoe</h5>
+            <p class="text-secondary" style="width: 80%;">
+                Choosing the correct pair of adidas shoes for your sport is crucial. Along with protecting you from
+                injury, a specific sport shoe will support your feet during activity and deliver high performance. If
+                you tend to play a lot of sports like football on astro-turf, you’ll need sports shoes that take the
+                pressure off your feet. For racquet sports, shoes should offer the correct stability when you move from
+                side to side. When you choose running shoes they need to be extremely flexible, so your feet can bend
+                and flex during each step. Lightweight sports shoes with a Primeknit upper are ideal for aerobic classes
+                and gym workouts, and it’s good to look for a Bounce midsole which provides cushioning on impact.
+            </p>
+            <hr class="text-secondary my-5">
+        </div>
+    </section>
+
+    <!------------------------------------------------------------- Shoe Ads Section --------------------------------------------------------------------->
+
+    <img src="img/shoe_ad_1.jpg" alt="" class="w-100 d-block" style="height: 700px;object-fit: cover;">
+    <div class="shoead1-content d-none d-lg-block">
+        <h3 class="text-light fw-bold" style="position: relative;top: -340px;left: 1000px;">Shoes that move with you.
+            <br>Comfort that stays with you.</h3>
+        <a href="#home" class="btn btn-lg btn-outline-light" style="position: relative;top: -300px;left: 1000px;">Shop Now
+            <i class="bi bi-arrow-right"></i></a>
+    </div>
+    
+    <img src="img/shoe_ad_2.jpg" alt="" class="w-100 d-block"
+        style="height: 700px;object-fit: cover;position: relative;top:-110px">
+    <div class="shoead2-content d-none d-lg-block">
+        <h3 class="text-light fw-bold" style="position: relative;top: -600px;left: 200px;">More than just shoes, <br>it’s a
+            step towards confidence</h3>
+        <a href="#home" class="btn btn-lg btn-outline-light" style="position: relative;top: -580px;left: 200px;">Shop Now <i
+                class="bi bi-arrow-right"></i></a>
+    </div>
+
+    <!-------------------------------------------------------------- FAQ Section ------------------------------------------------------------------------->
+    <section class="faq mb-5 mt-0" style="position: relative;top: -100px;">
+        <div class="container">
+            <hr class="text-secondary my-4">
+            <h2 class="text-info mb-3">FAQ</h2>
+            <p class="text-warning" style="width: 80%;">Frequently Asked Questions</p>
+            <h5 class="text-light mb-3">What sizes do you offer?</h5>
+            <p class="text-secondary" style="width: 80%;">We provide a wide range of sizes to ensure the perfect fit for
+                every customer.</p>
+            <h5 class="text-light mb-3">Can I track my order?</h5>
+            <p class="text-secondary" style="width: 80%;">Yes! Once your order is shipped, you’ll receive a tracking
+                number to follow its progress.</p>
+            <h5 class="text-light mb-3">What is your return policy?</h5>
+            <p class="text-secondary" style="width: 80%;">We offer a 30-day return policy for unworn shoes. Simply reach
+                out to our customer service team for assistance.</p>
+            <h5 class="text-light mb-3"> What payment methods do you accept?</h5>
+            <p class="text-secondary" style="width: 80%;">We accept all major credit/debit cards (Visa, Mastercard,
+                American Express), PayPal, and online banking options.</p>
+            <h5 class="text-light mb-3">How long does shipping take?</h5>
+            <p class="text-secondary" style="width: 80%;">Standard shipping usually takes 5-7 business days. Expedited
+                shipping options are available at checkout for faster delivery.</p>
+            <h5 class="text-light mb-3">Can I get personalized recommendations?</h5>
+            <p class="text-secondary" style="width: 80%;">Absolutely! Reach out to our customer support team, and we’ll
+                help you find the right style and fit based on your preferences.</p>
+            <hr class="text-secondary my-5">
+        </div>
+    </section>
+
+ <!--------------------------------------------------------------- About Section ------------------------------------------------------------->
+
+ <div class="container mb-5" style="position: relative;top: -100px;" id="about">
+    <h2 class="text-info mb-3">ABOUT US</h2>
+    <P class="text-warning">At DINEBUY, we’re more than just a shoe brand – we’re a lifestyle choice for those who value both comfort and
+        style. Founded on the belief that everyone deserves footwear that feels as good as it looks, DINEBUY brings
+        together quality craftsmanship, innovative design, and affordability to create shoes that elevate your every
+        step.
+        <br>
+        <br>
+        Our journey began with a simple mission: to offer shoes that combine superior comfort with cutting-edge
+        fashion. Whether you’re dressing up for a special occasion, going for a casual stroll, or hitting the gym,
+        we have a pair of shoes that fits your needs – and your personality.
+
+    </P>
+</div>
+
+    <!-- Footer Section -->
+
+    <footer class="bg-dark">
+        <div class="container p-5">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Get to Know Us</h5>
+                    <a href="mailto:dinebuy16@gmail.com" class="text-decoration-none d-block footer-links">Contact Us</a>
+                    <a href="#about" class="text-decoration-none d-block footer-links">About Us</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Careers</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Press Release</a>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Connect With Us</h5>
+                    <h6 class="text-info">Social</h6>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-facebook"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-twitter-x"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-instagram"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-youtube"></i></a>
+                    <a href="" class="text-decoration-none pe-2 footer-links"><i class="bi bi-whatsapp"></i></a>
+                    <h6 class="text-info mt-2">Email</h6>
+                    <a href="mailto:dinebuy16@gmail.com" class="text-decoration-none footer-links"><i
+                            class="bi bi-envelope-at-fill"></i> dinebuy16@gmail.com</a>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Consumer Policy</h5>
+                    <a href="" class="text-decoration-none d-block footer-links">Cancellation & Returns</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Terms of Use</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Security</a>
+                    <a href="" class="text-decoration-none d-block footer-links">FAQ</a>
+                    <a href="" class="text-decoration-none d-block footer-links">Privacy</a>
+                </div>
+                <div class="col mb-3">
+                    <h5 class="text-secondary">Registered Office Address</h5>
+                    <address style="color: white;">32A, Thiruvalluvar St,<br>
+                        Beerangimedu,<br>
+                        Gingee-604 202.<br>
+                        Villupuram District.
+                    </address>
+                </div>
+            </div>
+            <hr class="text-secondary mt-5">
+            <div class="row row-cols-1">
+                <div class="col">
+                    <div class="text-center my-3 text-secondary" style="font-size: 13px;">
+                        <a href="" class="text-decoration-none quick-links mx-3">Privacy Policy</a> | 
+                        <a href="" class="text-decoration-none quick-links mx-3">Terms and Conditions</a> | 
+                        <a href="" class="text-decoration-none quick-links mx-3">Cookies</a>
+                    </div>
+                </div>
+                <div class="col text-center quick-links mt-3" style="font-size: 13px;">
+                    &copy; 2024 DineBuy India Marketing Pvt. Ltd
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
